@@ -8,12 +8,14 @@ import {
 } from "react-router";
 import "./index.css";
 import App from "./App.jsx";
+import Resume from "./components/Resume.jsx";
 import Home from "./components/Home.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
+      <Route path="resume" element={<Resume />} />
     </Route>,
   ),
 );
