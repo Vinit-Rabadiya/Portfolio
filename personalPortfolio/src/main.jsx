@@ -8,9 +8,14 @@ import {
 } from "react-router";
 import "./index.css";
 import App from "./App.jsx";
+import Home from "./components/Home.jsx";
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<App />} />),
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route path="" element={<Home />} />
+    </Route>,
+  ),
 );
 createRoot(document.getElementById("root")).render(
   <StrictMode>
