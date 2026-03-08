@@ -4,13 +4,13 @@ import "./Header.css";
 function Header() {
   const location = useLocation();
   const navigate = useNavigate();
-  
+
   // Only highlight Home when on root path with no hash
   const isHomeActive = location.pathname === "/" && !location.hash;
-  
+
   const handleSectionClick = (sectionId, e) => {
     e.preventDefault();
-    
+
     if (location.pathname !== "/") {
       // Navigate to home page with hash
       navigate(`/#${sectionId}`);
@@ -23,7 +23,7 @@ function Header() {
       }
     }
   };
-  
+
   return (
     <header className="font-[var(--font)] bg-[var(--bg-color)] py-6 px-4 flex justify-center border-b border-green-800">
       <nav>
@@ -35,7 +35,7 @@ function Header() {
                 `nav-link ${isHomeActive ? "active text-green-500" : "text-white"} no-underline transition-colors duration-300`
               }
             >
-              Home
+              HOME
             </NavLink>
           </li>
           <li>
@@ -48,7 +48,7 @@ function Header() {
                   : "text-white"
               } no-underline transition-colors duration-300 cursor-pointer`}
             >
-              Skills
+              SKILLS
             </a>
           </li>
           <li>
@@ -61,7 +61,7 @@ function Header() {
                   : "text-white"
               } no-underline transition-colors duration-300 cursor-pointer`}
             >
-              Projects
+              PROJECTS
             </a>
           </li>
           <li>
@@ -71,7 +71,7 @@ function Header() {
                 `nav-link ${isActive ? "active text-green-500" : "text-white"} no-underline transition-colors duration-300`
               }
             >
-              Resume
+              RESUME
             </NavLink>
           </li>
         </ul>
