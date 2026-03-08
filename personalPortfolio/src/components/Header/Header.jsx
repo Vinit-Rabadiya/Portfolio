@@ -25,7 +25,7 @@ function Header() {
   };
   
   return (
-    <header className="font-[var(--font)] bg-[var(--bg-color)] py-6 px-4 flex justify-center">
+    <header className="font-[var(--font)] bg-[var(--bg-color)] py-6 px-4 flex justify-center border-b border-green-800">
       <nav>
         <ul className="flex gap-1 items-center list-none m-0 p-0">
           <li>
