@@ -15,16 +15,22 @@ function Header() {
   };
 
   return (
-    <header>
+    <header className="bg-[var(--bg-color)] text-white p-6 flex justify-between items-center">
       <nav>
-        <ul>
+        <ul className="flex gap-6 items-center">
           <li>
             <a onClick={handleHomeClick} href="#home">
               Home
             </a>
+          </li>
+          <li>
             <a href="#skills">Skills</a>
+          </li>
+          <li>
             <a href="#projects">Projects</a>
+          </li>
 
+          <li>
             <NavLink to="resume">Resume</NavLink>
           </li>
         </ul>

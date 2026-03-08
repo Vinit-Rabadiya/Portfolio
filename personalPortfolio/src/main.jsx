@@ -10,6 +10,7 @@ import App from "./App.jsx";
 import Resume from "./pages/Resume/Resume.jsx";
 import Home from "./pages/Home/Home.jsx";
 import "./styles/variable.css";
+import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
