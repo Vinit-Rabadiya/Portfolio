@@ -27,14 +27,12 @@ function Header() {
   return (
     <header className="font-[var(--font)] bg-[var(--bg-color)] py-6 px-4 flex justify-center">
       <nav>
-        <ul className="flex gap-6 items-center list-none m-0 p-0">
+        <ul className="flex gap-1 items-center list-none m-0 p-0">
           <li>
             <NavLink
               to="/"
               className={() =>
-                isHomeActive
-                  ? "text-green-500 no-underline transition-colors duration-300 hover:text-green-500"
-                  : "text-white no-underline transition-colors duration-300 hover:text-green-500"
+                `nav-link ${isHomeActive ? "active text-green-500" : "text-white"} no-underline transition-colors duration-300`
               }
             >
               Home
@@ -44,11 +42,11 @@ function Header() {
             <a
               href="#skills"
               onClick={(e) => handleSectionClick("skills", e)}
-              className={`${
+              className={`nav-link ${
                 location.pathname === "/" && location.hash === "#skills"
-                  ? "text-green-500"
+                  ? "active text-green-500"
                   : "text-white"
-              } no-underline transition-colors duration-300 hover:text-green-500 cursor-pointer`}
+              } no-underline transition-colors duration-300 cursor-pointer`}
             >
               Skills
             </a>
@@ -57,11 +55,11 @@ function Header() {
             <a
               href="#projects"
               onClick={(e) => handleSectionClick("projects", e)}
-              className={`${
+              className={`nav-link ${
                 location.pathname === "/" && location.hash === "#projects"
-                  ? "text-green-500"
+                  ? "active text-green-500"
                   : "text-white"
-              } no-underline transition-colors duration-300 hover:text-green-500 cursor-pointer`}
+              } no-underline transition-colors duration-300 cursor-pointer`}
             >
               Projects
             </a>
@@ -70,9 +68,7 @@ function Header() {
             <NavLink
               to="/resume"
               className={({ isActive }) =>
-                isActive
-                  ? "text-green-500 no-underline transition-colors duration-300 hover:text-green-500"
-                  : "text-white no-underline transition-colors duration-300 hover:text-green-500"
+                `nav-link ${isActive ? "active text-green-500" : "text-white"} no-underline transition-colors duration-300`
               }
             >
               Resume
