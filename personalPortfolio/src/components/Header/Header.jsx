@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
   const navigate = useNavigate();

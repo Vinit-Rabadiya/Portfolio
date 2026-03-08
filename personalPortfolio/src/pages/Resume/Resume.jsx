@@ -1,4 +1,5 @@
 import React from "react";
+import "./Resume.css";
 
 function Resume() {
   return <h1>Resume</h1>;
