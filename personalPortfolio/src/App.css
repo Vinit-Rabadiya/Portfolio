@@ -1,1 +1,11 @@
-
+.page-background {
+  min-height: 100vh;
+  background-color: rgb(28, 28, 34);
+  background-image: radial-gradient(
+    circle,
+    #888 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  padding: 20px;
+}
