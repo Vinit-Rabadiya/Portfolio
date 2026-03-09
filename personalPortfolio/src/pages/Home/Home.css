@@ -39,3 +39,23 @@
 .hero-content h1 {
   user-select: none;
 }
+
+.blink-cursor::after {
+  content: " ";
+  animation: blink-caret 1s step-end infinite;
+  display: inline-block;
+  margin-left: 20px;
+  width: 20px;
+  height: 0.7em;
+  background-color: #00ff88;
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

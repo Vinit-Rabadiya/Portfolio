@@ -31,8 +31,11 @@ function Home() {
               Curiosity. Code. Create.
             </p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Hi, I'm <span className="text-[#00ff88]">Vinit Rabadiya</span>
-              <span className="text-[#00ff88]">□</span>
+              Hi, I'm <span className="text-[#00ff88]">Vinit Rabadiya.</span>
+              <span
+                className="blink-cursor text-[#00ff88]"
+                aria-hidden="true"
+              ></span>
             </h1>
 
             <h2 className="text-2xl md:text-2xl text-gray-300 mb-6">
