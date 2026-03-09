@@ -33,7 +33,7 @@ function Home() {
             </p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Hello, I'm{" "}
-              <span className="name text-[#00ff88]">
+              <span className="name mt-2 text-[#00ff88]">
                 Vinit Rabadiya.
                 <span
                   className="blink-cursor text-[#00ff88]"
