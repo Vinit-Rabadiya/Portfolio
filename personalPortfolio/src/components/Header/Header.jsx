@@ -29,11 +29,11 @@ function Header() {
       <div className="logo text-2xl font-bold">
         V
         <span className="i-letter">
-          i<span className="dot"></span>
+          ı<span className="dot"></span>
         </span>
         n
         <span className="i-letter">
-          i<span className="dot"></span>
+          ı<span className="dot"></span>
         </span>
         t<span className="square"></span>
       </div>
