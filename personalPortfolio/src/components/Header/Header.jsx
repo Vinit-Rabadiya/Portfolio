@@ -25,7 +25,7 @@ function Header() {
   };
 
   return (
-    <header className="font-[var(--font)] bg-[var(--bg-color)] py-6 px-4 flex  items-center border-b border-green-800">
+    <header className="font-[var(--font)] bg-[var(--bg-color)] py-3 px-4 flex  items-center border-b border-green-800">
       <div className="logo text-2xl font-bold">
         V
         <span className="i-letter">
