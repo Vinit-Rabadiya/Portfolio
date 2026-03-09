@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 :root {
-  --font: "JetBrains Mono", monospace;
+  --font:
+    "SF Mono", "JetBrains Mono", "Monaco", "Menlo", "Courier New", monospace;
   --bg-color: rgb(28, 28, 34);
 }
