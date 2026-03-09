@@ -18,6 +18,7 @@
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
+  min-height: 3.4em; /* Reserve space for 2 lines of text */
 }
 
 /* Optional: Add subtle animation on page load */
@@ -28,11 +29,9 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 

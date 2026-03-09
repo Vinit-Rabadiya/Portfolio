@@ -24,11 +24,11 @@ function Home() {
       <div className="home-container">
         <section
           id="home"
-          className="min-h-screen flex flex-col justify-center items-center px-4"
+          className="min-h-100 flex flex-col justify-center items-center px-4"
         >
           <div className="hero-content text-center max-w-3xl">
-            <p className="hero-tagline text-xl md:text-2xl mb-8">
-              Curiosity. Code. Create
+            <p className="hero-tagline text-xl md:text-4xl mb-8 font-bold">
+              Curiosity. Code. Create.
             </p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Hi, I'm <span className="text-[#00ff88]">Vinit Rabadiya</span>
