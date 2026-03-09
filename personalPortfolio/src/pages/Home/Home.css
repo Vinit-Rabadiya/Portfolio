@@ -1,5 +1,42 @@
-.hero-content {
+/* Font family for entire home page */
+.home-container {
   font-family: var(--font);
 }
 
+/* Hero Tagline - Small intro at top */
+.hero-tagline {
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
 
+/* Hero Description */
+.hero-description {
+  color: #9ca3af;
+  line-height: 1.7;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Optional: Add subtle animation on page load */
+.hero-content {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Make name and square unselectable */
+.hero-content h1 {
+  user-select: none;
+}

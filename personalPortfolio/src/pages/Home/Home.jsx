@@ -1,7 +1,24 @@
-import React from "react";
+import React, { use } from "react";
+import { useState, useEffect } from "react";
 import "./Home.css";
 
 function Home() {
+  const [displayText, setDisplayText] = useState("");
+  const fullText =
+    "Student developer exploring AI/ML and building web applications while turning ideas into real projects.";
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= fullText.length) {
+        setDisplayText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 50); // Speed: 30ms per character (adjust for faster/slower)
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <>
       <div className="home-container">
@@ -22,8 +39,7 @@ function Home() {
               Data Science Intern | Full Stack Developer
             </h2>
             <p className="hero-description text-base md:text-lg text-gray-400">
-              Student developer exploring AI/ML and building web applications
-              while turning ideas into real projects.
+              {displayText}
             </p>
           </div>
         </section>
