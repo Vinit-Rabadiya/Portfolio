@@ -51,6 +51,22 @@ function Skills() {
       { name: "GitHub", logo: logos.github },
     
   ];
+  
+  const invertedPyramid = (items) => {
+    const totalItems = items.length;
+    const maxRowSize = Math.ceil((-1 +Math.sqrt(1+8*totalItems))/2);
+    const rows =[];
+    let index = 0;
+
+    for (let rowSize = maxRowSize; rowSize>0 && index<totalItems; rowSize--){
+      const rowItems = items.slice(index, index+rowSize);
+      rows.push(rowItems);
+      index += rowSize;
+    }
+    return rows;
+  };
+
+  const pyramidRows = invertedPyramid(skills);
 
   return (
     <section id="skills" className="skills-section">
