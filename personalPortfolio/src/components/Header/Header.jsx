@@ -25,8 +25,19 @@ function Header() {
   };
 
   return (
-    <header className="font-[var(--font)] bg-[var(--bg-color)] py-6 px-4 flex justify-center border-b border-green-800">
+    <header className="font-[var(--font)] bg-[var(--bg-color)] py-6 px-4 flex justify-between border-b border-green-800">
       <nav>
+        <div className="logo text-2xl font-bold">
+          V
+          <span className="i-letter">
+            i<span className="dot"></span>
+          </span>
+          n
+          <span className="i-letter">
+            i<span className="dot"></span>
+          </span>
+          t
+        </div>
         <ul className="flex gap-1 items-center list-none m-0 p-0">
           <li>
             <NavLink
