@@ -75,6 +75,14 @@ nav a.active::after {
     0 0 6px #22c55e,
     0 0 12px #22c55e;
 }
+.square {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  margin-left: 10px;
+  vertical-align:baseline;
+}
 
 @keyframes glowDot {
   0% {
