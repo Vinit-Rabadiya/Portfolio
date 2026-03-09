@@ -5,3 +5,7 @@
   background-size: 25px 25px;
   padding: 20px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
