@@ -25,7 +25,7 @@ function Home() {
       <div className="home-container">
         <section
           id="home"
-          className="min-h-screen flex flex-col justify-center items-center px-4"
+          className="min-h-screen flex flex-col justify-start items-center px-4 pt-10"
         >
           <div className="hero-content text-center max-w-3xl">
             <p className="hero-tagline text-xl md:text-4xl mb-8 font-black">
