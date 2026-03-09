@@ -56,6 +56,10 @@ nav a.active::after {
   font-weight: 700;
   font-family: var(--font);
   color: white;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .i-letter {
   position: relative;
