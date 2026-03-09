@@ -70,16 +70,19 @@ function Skills() {
 
   return (
     <section id="skills" className="skills-section">
-      <div>
-        <h2>Skills</h2>
-        <ul>
-          {skills.map((skill) => (
-            <li key={skill.name}>
+    <div>
+      {pyramidRows.map((row, rowIndex)=>(
+        <div key={rowIndex} className="skill-row">
+          {row.map((skill)=>(
+            <div key={skill.name} className="skill-item">
               <img src={skill.logo} alt={skill.name} />
-            </li>
+
+            </div>
           ))}
-        </ul>
-      </div>
+
+        </div>
+      ))}
+    </div>
     </section>
   );
 }
