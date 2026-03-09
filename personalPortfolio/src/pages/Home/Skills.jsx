@@ -70,6 +70,7 @@ function Skills() {
 
   return (
     <section id="skills" className="skills-section">
+       <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#00ff88]">SKILLS</h2>
     <div>
       {pyramidRows.map((row, rowIndex)=>(
         <div key={rowIndex} className="skill-row">
