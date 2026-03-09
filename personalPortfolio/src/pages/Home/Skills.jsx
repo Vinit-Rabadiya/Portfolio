@@ -73,7 +73,7 @@ function Skills() {
 
   return (
     <section id="skills" className="skills-section pt-10">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#00ff88]">
+      <h2 className="text-4xl md:text-2xl font-bold text-center mb-5 -mt-10 text-[#00ff88]">
         SKILLS
       </h2>
       <div>
