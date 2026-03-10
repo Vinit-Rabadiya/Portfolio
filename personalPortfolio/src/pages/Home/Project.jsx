@@ -19,30 +19,42 @@ function Project() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-start items-center px-4 pt-10"
+      className="min-h-screen flex flex-col items-center px-4 pt-10"
     >
-      <h2 className="text-4xl md:text-2xl font-bold text-center mb-3 -mt-10 text-[#00ff88]">
+      <h2 className="text-4xl md:text-2xl font-bold text-center mb-8 text-[#00ff88]">
         PROJECTS
       </h2>
-      <div className="projects-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div className="projects-container grid grid-cols-[repeat(auto-fit,minmax(300px,320px))] justify-center gap-8 w-full">
         {projects.map((project, index) => (
           <div
-            className="project-card max-w-sm rounded overflow-hidden shadow-lg bg-[#111] hover:scale-105 transition-transform duration-300 p-4"
+            className="project-card w-full rounded-xl overflow-hidden shadow-lg bg-[#111] hover:scale-105 hover:shadow-[0_0_20px_#00ff88] transition-all duration-300 p-4"
             key={index}
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded"
+              className="w-full h-48 object-cover rounded-lg"
             />
+
             <div className="py-4">
-              <div className="font-bold text-xl mb-3 text-white">
+              <h3 className="font-bold text-xl mb-3 text-white">
                 {project.title}
-              </div>
-              <p className="text-gray-400 text-base">{project.description}</p>
+              </h3>
+
+              <p className="text-gray-400 text-sm">{project.description}</p>
             </div>
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-block -mt-3">
-              <img src={gitHubLogo} className="github-icon" />
+
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <img
+                src={gitHubLogo}
+                className="github-icon w-7 hover:scale-110 transition"
+              />
             </a>
           </div>
         ))}
