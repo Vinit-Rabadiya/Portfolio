@@ -79,7 +79,7 @@ function Skills() {
   const pyramidRows = invertedPyramid(skills);
 
   return (
-    <section id="skills" className="skills-section pt-10">
+    <section id="skills" className="skills-section min-h-screen">
       <h2 className="text-4xl md:text-2xl font-bold text-center mb-5 -mt-10 text-[#00ff88]">
         SKILLS
       </h2>
