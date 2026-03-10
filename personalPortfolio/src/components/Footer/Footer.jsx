@@ -29,7 +29,7 @@ function Footer() {
             <img 
               src={linkedinLogo} 
               alt="LinkedIn" 
-              className="w-8 h-8 filter brightness-75 hover:brightness-100 hover:drop-shadow-[0_0_8px_rgba(0,255,136,0.6)]"
+              className="w-8 h-8 hover:drop-shadow-[0_0_8px_rgba(0,255,136,0.6)]"
             />
           </a>
           <a
