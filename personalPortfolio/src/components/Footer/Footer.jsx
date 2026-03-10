@@ -12,34 +12,34 @@ function Footer() {
             href="https://github.com/Vinit-Rabadiya"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity duration-300"
+            className="p-2 rounded-full hover:bg-[#00ff88]/20 transition-all duration-300"
           >
             <img 
               src={gitHubLogo} 
               alt="GitHub" 
-              className="w-8 h-8 filter invert brightness-75 hover:brightness-100 hover:drop-shadow-[0_0_8px_rgba(0,255,136,0.6)]"
+              className="w-8 h-8 filter invert"
             />
           </a>
           <a
             href="https://www.linkedin.com/in/vinitrabadiya/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity duration-300"
+            className="p-2 rounded-full hover:bg-[#00ff88]/20 transition-all duration-300"
           >
             <img 
               src={linkedinLogo} 
               alt="LinkedIn" 
-              className="w-8 h-8 hover:drop-shadow-[0_0_8px_rgba(0,255,136,0.6)]"
+              className="w-8 h-8"
             />
           </a>
           <a
             href="mailto:vinitrabadiya22@gmail.com"
-            className="hover:opacity-80 transition-opacity duration-300"
+            className="p-2 rounded-full hover:bg-[#00ff88]/20 transition-all duration-300"
           >
             <img 
               src={emailLogo} 
               alt="Email" 
-              className="w-8 h-8 filter invert brightness-75 hover:brightness-100 hover:drop-shadow-[0_0_8px_rgba(0,255,136,0.6)]"
+              className="w-8 h-8 filter invert"
             />
           </a>
         </div>
