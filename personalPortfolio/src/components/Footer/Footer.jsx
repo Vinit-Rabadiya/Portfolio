@@ -22,7 +22,7 @@ function Footer() {
             LinkedIn
           </a>
           <a
-            href="mailto:youremail@gmail.com"
+            href="mailto:vinitrabadiya22@gmail.com"
             className="text-gray-400 hover:text-[#00ff88] transition-colors duration-300"
           >
             Email
