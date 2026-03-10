@@ -22,33 +22,40 @@ function Skills() {
       "../../assets/reactrouter-original.svg",
       import.meta.url,
     ).href,
+    html5: new URL("../../assets/html5-original.svg", import.meta.url).href,
     css3: new URL("../../assets/css3-original.svg", import.meta.url).href,
     mysql: new URL("../../assets/mysql-original.svg", import.meta.url).href,
     git: new URL("../../assets/git-original.svg", import.meta.url).href,
     github: new URL("../../assets/github-original.svg", import.meta.url).href,
+    firebase: new URL("../../assets/firebase-original.svg", import.meta.url)
+      .href,
+    seaborn: new URL("../../assets/seaborn-original.svg", import.meta.url).href,
   };
 
   // Skills data organized by category
   const skills = [
     { name: "Python", logo: logos.python },
     { name: "JavaScript", logo: logos.javascript },
+    { name: "HTML5", logo: logos.html5 },
+    { name: "CSS3", logo: logos.css3 },
     { name: "Java", logo: logos.java },
     { name: "C++", logo: logos.cplusplus },
     { name: "PHP", logo: logos.php },
-
-    { name: "Pandas", logo: logos.pandas },
-    { name: "NumPy", logo: logos.numpy },
-    { name: "Jupyter", logo: logos.jupyter },
 
     { name: "React", logo: logos.react },
     { name: "Tailwind CSS", logo: logos.tailwind },
     { name: "Vite", logo: logos.vite },
     { name: "React Router", logo: logos.reactRouter },
-    { name: "CSS3", logo: logos.css3 },
 
-    { name: "MySQL", logo: logos.mysql },
+    { name: "Pandas", logo: logos.pandas },
+    { name: "NumPy", logo: logos.numpy },
+    { name: "Jupyter", logo: logos.jupyter },
+    { name: "Seaborn", logo: logos.seaborn },
+
     { name: "Git", logo: logos.git },
     { name: "GitHub", logo: logos.github },
+    { name: "Firebase", logo: logos.firebase },
+    { name: "MySQL", logo: logos.mysql },
   ];
 
   const invertedPyramid = (items) => {
