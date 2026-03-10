@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { useState, useEffect } from "react";
 import "./Home.css";
 import Skills from "./Skills";
+import Project from "./Project";
 
 function Home() {
   const [displayText, setDisplayText] = useState("");
@@ -52,9 +53,7 @@ function Home() {
         </section>
 
         <Skills />
-        <section id="projects">
-          <h2>Projects</h2>
-        </section>
+        <Project />
       </div>
     </>
   );
