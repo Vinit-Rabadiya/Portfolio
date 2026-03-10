@@ -1,5 +1,6 @@
 import React from "react";
 import gitHubLogo from "../../assets/github-original.svg";
+import "./Project.css";
 
 function Project() {
   const projects = [
@@ -27,7 +28,7 @@ function Project() {
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <a href={project.github} target="_blank" rel="noopener noreferrer">
-              <img src={gitHubLogo} />
+              <img src={gitHubLogo} className="github-icon" />
             </a>
           </div>
         ))}
