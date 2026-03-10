@@ -1,6 +1,6 @@
 import gitHubLogo from "../../assets/github-original.svg";
 import emailLogo from "../../assets/email.svg";
-import linkedinLogo from "../../assets/linkedin-original.svg";
+import linkedinLogo from "../../assets/linkedin-plain.svg";
 import "./Footer.css";
 
 function Footer() {
@@ -14,9 +14,9 @@ function Footer() {
             rel="noopener noreferrer"
             className="p-2 rounded-full hover:bg-[#00ff88]/20 transition-all duration-300"
           >
-            <img 
-              src={gitHubLogo} 
-              alt="GitHub" 
+            <img
+              src={gitHubLogo}
+              alt="GitHub"
               className="w-8 h-8 filter invert"
             />
           </a>
@@ -26,19 +26,19 @@ function Footer() {
             rel="noopener noreferrer"
             className="p-2 rounded-full hover:bg-[#00ff88]/20 transition-all duration-300"
           >
-            <img 
-              src={linkedinLogo} 
-              alt="LinkedIn" 
-              className="w-8 h-8"
+            <img
+              src={linkedinLogo}
+              alt="LinkedIn"
+              className="w-8 h-8 filter invert"
             />
           </a>
           <a
             href="mailto:vinitrabadiya22@gmail.com"
             className="p-2 rounded-full hover:bg-[#00ff88]/20 transition-all duration-300"
           >
-            <img 
-              src={emailLogo} 
-              alt="Email" 
+            <img
+              src={emailLogo}
+              alt="Email"
               className="w-8 h-8 filter invert"
             />
           </a>
