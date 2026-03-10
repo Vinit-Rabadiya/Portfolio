@@ -87,7 +87,10 @@ function Skills() {
         {pyramidRows.map((row, rowIndex) => (
           <div key={rowIndex} className="skill-row">
             {row.map((skill) => (
-              <div key={skill.name} className="skill-item">
+              <div
+                key={skill.name}
+                className="skill-item hover:scale-120 transition-all duration-800 cursor-pointer"
+              >
                 <img src={skill.logo} alt={skill.name} />
               </div>
             ))}
