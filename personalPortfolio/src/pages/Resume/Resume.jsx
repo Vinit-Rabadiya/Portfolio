@@ -1,39 +1,53 @@
 import "./Resume.css";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 
 const experienceIcon = new URL("../../assets/experience.svg", import.meta.url)
   .href;
 const educationIcon = new URL("../../assets/book.svg", import.meta.url).href;
 
 function Resume() {
+  const experienceLineRef = useRef(null);
+  const educationLineRef = useRef(null);
   const experienceContentRef = useRef(null);
   const educationContentRef = useRef(null);
-  const [experienceLineHeight, setExperienceLineHeight] = useState(0);
-  const [educationLineHeight, setEducationLineHeight] = useState(0);
 
   useEffect(() => {
     const updateLineHeights = () => {
-      if (experienceContentRef.current) {
-        const lastItem = experienceContentRef.current.lastElementChild;
-        if (lastItem) {
-          // Get the position of the last item relative to the content container
-          // Add the top offset of the dot (8px = top-2) plus half the dot height (6px) to center on it
-          const dotPosition = lastItem.offsetTop + 8 + 6;
-          // Add the heading height (text-3xl + mb-8) which is approximately 80px
-          setExperienceLineHeight(dotPosition + 80);
+      // Update experience line
+      if (experienceContentRef.current && experienceLineRef.current) {
+        const items = experienceContentRef.current.querySelectorAll('.timeline-item');
+        if (items.length > 0) {
+          const lastItem = items[items.length - 1];
+          const dot = lastItem.querySelector('.timeline-dot');
+          if (dot) {
+            // Get the absolute position of the dot relative to the line container
+            const lineRect = experienceLineRef.current.getBoundingClientRect();
+            const dotRect = dot.getBoundingClientRect();
+            // Calculate height from top of line to center of last dot
+            const height = dotRect.top - lineRect.top + (dotRect.height / 2);
+            experienceLineRef.current.style.height = `${height}px`;
+          }
         }
       }
-      if (educationContentRef.current) {
-        const lastItem = educationContentRef.current.lastElementChild;
-        if (lastItem) {
-          const dotPosition = lastItem.offsetTop + 8 + 6;
-          setEducationLineHeight(dotPosition + 80);
+      
+      // Update education line
+      if (educationContentRef.current && educationLineRef.current) {
+        const items = educationContentRef.current.querySelectorAll('.timeline-item');
+        if (items.length > 0) {
+          const lastItem = items[items.length - 1];
+          const dot = lastItem.querySelector('.timeline-dot');
+          if (dot) {
+            const lineRect = educationLineRef.current.getBoundingClientRect();
+            const dotRect = dot.getBoundingClientRect();
+            const height = dotRect.top - lineRect.top + (dotRect.height / 2);
+            educationLineRef.current.style.height = `${height}px`;
+          }
         }
       }
     };
 
     // Use setTimeout to ensure DOM is fully rendered
-    setTimeout(updateLineHeights, 0);
+    setTimeout(updateLineHeights, 100);
     window.addEventListener('resize', updateLineHeights);
     return () => window.removeEventListener('resize', updateLineHeights);
   }, []);
@@ -89,8 +103,8 @@ function Resume() {
               </div>
               {/* Vertical line from icon to last dot */}
               <div 
+                ref={experienceLineRef}
                 className="absolute left-1/2 -translate-x-1/2 top-0 w-0.5 bg-gray-700"
-                style={{ height: `${experienceLineHeight}px` }}
               ></div>
             </div>
 
@@ -101,21 +115,23 @@ function Resume() {
               </h2>
               <div className="relative" ref={experienceContentRef}>
                 {experiences.map((experience, index) => (
-                  <div key={index} className="relative mb-10 last:mb-0">
+                  <div key={index} className="timeline-item relative mb-10 last:mb-0">
                     {/* Green dot on the line */}
-                    <div className="absolute -left-[54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
+                    <div className="timeline-dot absolute left-[-54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
 
-                    {/* Content */}
-                    <h3 className="text-lg font-semibold text-white mb-1">
-                      {experience.title}
-                    </h3>
-                    <p className="text-[#00ff88] mb-2 text-sm">{experience.company}</p>
-                    <p className="text-gray-400 text-sm mb-3">
-                      {experience.duration}
-                    </p>
-                    <p className="text-gray-300 leading-relaxed text-sm">
-                      {experience.description}
-                    </p>
+                    {/* Content with padding */}
+                    <div className="-ml-4">
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        {experience.title}
+                      </h3>
+                      <p className="text-[#00ff88] mb-2 text-sm">{experience.company}</p>
+                      <p className="text-gray-400 text-sm mb-3">
+                        {experience.duration}
+                      </p>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        {experience.description}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -146,8 +162,8 @@ function Resume() {
               </div>
               {/* Vertical line from icon to last dot */}
               <div 
+                ref={educationLineRef}
                 className="absolute left-1/2 -translate-x-1/2 top-0 w-0.5 bg-gray-700"
-                style={{ height: `${educationLineHeight}px` }}
               ></div>
             </div>
 
@@ -158,19 +174,21 @@ function Resume() {
               </h2>
               <div className="relative" ref={educationContentRef}>
                 {education.map((edu, index) => (
-                  <div key={index} className="relative mb-10 last:mb-0">
+                  <div key={index} className="timeline-item relative mb-10 last:mb-0">
                     {/* Green dot on the line */}
-                    <div className="absolute -left-[54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
+                    <div className="timeline-dot absolute left-[-54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
 
-                    {/* Content */}
-                    <h3 className="text-lg font-semibold text-white mb-1">
-                      {edu.institution}
-                    </h3>
-                    <p className="text-[#00ff88] mb-2 text-sm">{edu.degree}</p>
-                    <p className="text-gray-400 text-sm mb-3">{edu.duration}</p>
-                    <p className="text-gray-300 leading-relaxed text-sm">
-                      {edu.description}
-                    </p>
+                    {/* Content with padding */}
+                    <div className="-ml-4">
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        {edu.institution}
+                      </h3>
+                      <p className="text-[#00ff88] mb-2 text-sm">{edu.degree}</p>
+                      <p className="text-gray-400 text-sm mb-3">{edu.duration}</p>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        {edu.description}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
