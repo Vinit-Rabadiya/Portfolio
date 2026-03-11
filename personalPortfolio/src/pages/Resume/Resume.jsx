@@ -106,14 +106,14 @@ function Resume() {
                     <div className="absolute -left-[54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
 
                     {/* Content */}
-                    <h3 className="text-xl font-semibold text-white mb-1">
+                    <h3 className="text-lg font-semibold text-white mb-1">
                       {experience.title}
                     </h3>
-                    <p className="text-[#00ff88] mb-2">{experience.company}</p>
+                    <p className="text-[#00ff88] mb-2 text-sm">{experience.company}</p>
                     <p className="text-gray-400 text-sm mb-3">
                       {experience.duration}
                     </p>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed text-sm">
                       {experience.description}
                     </p>
                   </div>
@@ -163,12 +163,12 @@ function Resume() {
                     <div className="absolute -left-[54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
 
                     {/* Content */}
-                    <h3 className="text-xl font-semibold text-white mb-1">
+                    <h3 className="text-lg font-semibold text-white mb-1">
                       {edu.institution}
                     </h3>
-                    <p className="text-[#00ff88] mb-2">{edu.degree}</p>
+                    <p className="text-[#00ff88] mb-2 text-sm">{edu.degree}</p>
                     <p className="text-gray-400 text-sm mb-3">{edu.duration}</p>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed text-sm">
                       {edu.description}
                     </p>
                   </div>
