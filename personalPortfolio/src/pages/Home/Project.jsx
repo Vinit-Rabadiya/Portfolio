@@ -11,7 +11,7 @@ function Project() {
         import.meta.url,
       ).href,
       description:
-        "A secure password manager built with React and Firebase, allowing users to store and manage their passwords safely.",
+        "A password manager project that securely stores and manages user passwords using encryption and hashing, helping users organize and protect their login credentials in one place.",
       github: "https://github.com/Vinit-Rabadiya/Password-Manager",
     },
   ];
