@@ -38,6 +38,19 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
 
+  // Handle scrolling to section when navigating with hash
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      const sectionId = location.hash.replace("#", "");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100); // Small delay to ensure DOM is ready
+    }
+  }, [location]);
+
   const handleSectionClick = (sectionId, e) => {
     e.preventDefault();
 
