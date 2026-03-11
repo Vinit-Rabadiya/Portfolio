@@ -101,7 +101,7 @@ function Resume() {
               </h2>
               <div className="relative" ref={experienceContentRef}>
                 {experiences.map((experience, index) => (
-                  <div key={index} className="relative mb-10 last:mb-0 pl-8">
+                  <div key={index} className="relative mb-10 last:mb-0">
                     {/* Green dot on the line */}
                     <div className="absolute -left-[54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
 
@@ -158,7 +158,7 @@ function Resume() {
               </h2>
               <div className="relative" ref={educationContentRef}>
                 {education.map((edu, index) => (
-                  <div key={index} className="relative mb-10 last:mb-0 pl-8">
+                  <div key={index} className="relative mb-10 last:mb-0">
                     {/* Green dot on the line */}
                     <div className="absolute -left-[54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
 
