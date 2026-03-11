@@ -54,29 +54,34 @@ function Resume() {
 
   const experiences = [
     {
-      title: "Smart Fellow (Data Science Intern)",
+      title: "Junior Smart Fellow (Data Science Intern)",
       company: "@iLabAfrica",
-      duration: "June 2023 - August 2023",
-      description:
-        "Worked on a project focused on analyzing and predicting the spread of infectious diseases using machine learning algorithms. Developed a predictive model that achieved an accuracy of 85% in forecasting disease outbreaks based on historical data and environmental factors.",
+      duration: "January 2026 – Present",
+      responsibilities: [
+        "Perform data profiling, cleaning, and exploratory data analysis using Python (Pandas, NumPy, Matplotlib, Seaborn, and other libraries).",
+        "Applied machine learning models to conduct predictive analysis on real-world and healthcare-related data.",
+        "Interpret model results and generate meaningful insights.",
+        "Develop interactive dashboards in Power BI using measures, Power Query, and visualizations to present findings."
+      ]
     },
   ];
 
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of Nairobi",
-      duration: "2019 - 2023",
-      description:
-        "Graduated with First Class Honors, specializing in Data Science and Machine Learning. Completed coursework in algorithms, data structures, and artificial intelligence, and participated in various projects and internships related to software development and data analysis.",
+      degree: "Bachelor of Science in Informatics and Computer Science",
+      institution: "Strathmore University",
+      location: "Nairobi, Kenya",
+      duration: "2023 - Present",
+      description: "",
     },
     {
-      degree: "High School Diploma",
-      institution: "Nairobi High School",
-      duration: "2015 - 2018",
-      description:
-        "Graduated with a strong academic record, excelling in mathematics and computer science. Participated in extracurricular activities such as coding clubs and science fairs, which sparked an interest in technology and software development.",
+      degree: "Pearson Edexcel International Advanced Level (IAL) (A' Levels)",
+      institution: "SCLP Samaj Senior School",
+      location: "Nairobi, Kenya",
+      duration: "2020 - 2022",
+      description: "Obtained grade 'A' in Pure Mathematics and Chemistry, grade 'B' in Physics and grade 'C' in Further Pure Mathematics.",
     },
+    
   ];
 
   return (
@@ -124,13 +129,18 @@ function Resume() {
                       <h3 className="text-lg font-semibold text-white mb-1">
                         {experience.title}
                       </h3>
-                      <p className="text-[#00ff88] mb-2 text-sm">{experience.company}</p>
+                      <p className="text-[#00ff88] mb-1 text-sm">{experience.company}</p>
                       <p className="text-gray-400 text-sm mb-3">
                         {experience.duration}
                       </p>
-                      <p className="text-gray-300 leading-relaxed text-sm">
-                        {experience.description}
-                      </p>
+                      <ul className="text-gray-300 leading-relaxed text-sm space-y-2">
+                        {experience.responsibilities.map((item, idx) => (
+                          <li key={idx} className="flex">
+                            <span className="mr-2">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 ))}
@@ -181,13 +191,17 @@ function Resume() {
                     {/* Content with padding */}
                     <div className="-ml-4">
                       <h3 className="text-lg font-semibold text-white mb-1">
-                        {edu.institution}
+                        {edu.degree}
                       </h3>
-                      <p className="text-[#00ff88] mb-2 text-sm">{edu.degree}</p>
-                      <p className="text-gray-400 text-sm mb-3">{edu.duration}</p>
-                      <p className="text-gray-300 leading-relaxed text-sm">
-                        {edu.description}
+                      <p className="text-[#00ff88] mb-1 text-sm">
+                        {edu.institution} • {edu.location}
                       </p>
+                      <p className="text-gray-400 text-sm mb-3">{edu.duration}</p>
+                      {edu.description && (
+                        <p className="text-gray-300 leading-relaxed text-sm">
+                          {edu.description}
+                        </p>
+                      )}
                     </div>
                   </div>
                 ))}
