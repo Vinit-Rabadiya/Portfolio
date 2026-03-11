@@ -80,9 +80,9 @@ function Resume() {
   ];
 
   return (
-    <div className="min-h-screen py-20 px-6">
+    <div className="min-h-screen pt-2 pb-8 px-6">
       {/* Experience Section */}
-      <section id="experience" className="mb-16 scroll-mt-20">
+      <section id="experience" className="mb-4 scroll-mt-20">
         <div className="bg-[#111] p-8 rounded-lg">
           <div className="flex gap-6">
             {/* Left side - Icon with line */}
