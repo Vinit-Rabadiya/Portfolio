@@ -9,6 +9,13 @@ function Header() {
 
   // Detect which section is in view
   useEffect(() => {
+    // Only run scroll detection on home page
+    if (location.pathname !== "/" && location.pathname !== "") {
+      setActiveSection(""); // Clear active section when not on home page
+      window.scrollTo(0, 0); // Scroll to top when navigating to other pages
+      return;
+    }
+
     const handleScroll = () => {
       const sections = ["home", "skills", "projects"];
       const scrollPosition = window.scrollY + 100; // Offset for header height
@@ -29,7 +36,7 @@ function Header() {
     handleScroll(); // Check initial position
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const handleSectionClick = (sectionId, e) => {
     e.preventDefault();
