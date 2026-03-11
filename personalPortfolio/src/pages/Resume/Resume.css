@@ -3,3 +3,34 @@
 section {
   font-family: var(--font);
 }
+
+.timeline-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.3);
+  z-index: 10;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0.25rem;
+  top: 0.8125rem;
+  width: 1px;
+  height: calc(100% + 2.5rem - 0.8125rem);
+  background-color: rgb(55, 65, 81);
+}

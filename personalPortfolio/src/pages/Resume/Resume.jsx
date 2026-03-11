@@ -40,17 +40,11 @@ function Resume() {
             <img src={experienceIcon} alt="Experience" className="w-8 h-8" />
             EXPERIENCE
           </h2>
-          <div className="relative pl-8">
+          <div>
             {experiences.map((experience, index) => (
-              <div key={index} className="relative mb-10 last:mb-0">
-                {/* Green dot */}
-                <div className="absolute -left-[39px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_4px_rgba(0,255,136,0.3)]"></div>
-                
-                {/* Vertical line - only show if not the last item */}
-                {index < experiences.length - 1 && (
-                  <div className="absolute -left-[33px] top-[20px] bottom-[-40px] w-0.5 bg-gray-700"></div>
-                )}
-
+              <div key={index} className="timeline-item">
+                <div className="timeline-dot"></div>
+                {index < experiences.length - 1 && <div className="timeline-line"></div>}
                 
                 {/* Content */}
                 <h3 className="text-xl font-semibold text-white mb-1">
@@ -74,27 +68,18 @@ function Resume() {
             <img src={educationIcon} alt="Education" className="w-8 h-8" />
             EDUCATION
           </h2>
-          <div className="relative pl-8">
+          <div>
             {education.map((edu, index) => (
-              <div key={index} className="relative mb-10 last:mb-0">
-                {/* Green dot */}
-                <div className="absolute -left-[39px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_4px_rgba(0,255,136,0.3)]"></div>
-                
-                {/* Vertical line - only show if not the last item */}
-                {index < education.length - 1 && (
-                  <div className="absolute -left-[33px] top-[20px] bottom-[-40px] w-0.5 bg-gray-700"></div>
-                )}
+              <div key={index} className="timeline-item">
+                <div className="timeline-dot"></div>
+                {index < education.length - 1 && <div className="timeline-line"></div>}
                 
                 {/* Content */}
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-semibold text-white">
-                    {edu.institution}
-                  </h3>
-                  <p className="text-[#00ff88] text-sm whitespace-nowrap ml-4">
-                    {edu.duration}
-                  </p>
-                </div>
-                <p className="text-[#00ff88] mb-3">{edu.degree}</p>
+                <h3 className="text-xl font-semibold text-white mb-1">
+                  {edu.institution}
+                </h3>
+                <p className="text-[#00ff88] mb-2">{edu.degree}</p>
+                <p className="text-gray-400 text-sm mb-3">{edu.duration}</p>
                 <p className="text-gray-300 leading-relaxed">
                   {edu.description}
                 </p>
