@@ -53,16 +53,12 @@ function Resume() {
 
                 
                 {/* Content */}
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-semibold text-white">
-                    {experience.company}
-                  </h3>
-                  <p className="text-[#00ff88] text-sm whitespace-nowrap ml-4">
-                    {experience.duration}
-                  </p>
-                </div>
-                <p className="text-[#00ff88] mb-3">{experience.title}</p>
-                <p className="text-gray-400 leading-relaxed">
+                <h3 className="text-xl font-semibold text-white mb-1">
+                  {experience.title}
+                </h3>
+                <p className="text-[#00ff88] mb-2">{experience.company}</p>
+                <p className="text-gray-400 text-sm mb-3">{experience.duration}</p>
+                <p className="text-gray-300 leading-relaxed">
                   {experience.description}
                 </p>
               </div>
@@ -99,7 +95,7 @@ function Resume() {
                   </p>
                 </div>
                 <p className="text-[#00ff88] mb-3">{edu.degree}</p>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   {edu.description}
                 </p>
               </div>
