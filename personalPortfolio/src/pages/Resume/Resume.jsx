@@ -1,6 +1,9 @@
 import React from "react";
 import "./Resume.css";
 
+const experienceIcon = new URL('../../assets/experience.svg', import.meta.url).href;
+const educationIcon = new URL('../../assets/education.svg', import.meta.url).href;
+
 function Resume() {
   const experiences = [
     {
@@ -29,33 +32,63 @@ function Resume() {
     },
   ];
   return (
-    <>
-      <section id="Experience">
-        <div>
+    <div className="min-h-screen py-20 px-6">
+      {/* Experience Section */}
+      <section id="experience" className="mb-16 scroll-mt-20">
+        <h2 className="text-3xl font-bold mb-8 text-[#00ff88] flex items-center gap-3">
+          <img src={experienceIcon} alt="Experience" className="w-8 h-8" />
+          EXPERIENCE
+        </h2>
+        <div className="relative pl-8 border-l-2 border-gray-700">
           {experiences.map((experience, index) => (
-            <div key={index}>
-              <h2>{experience.title}</h2>
-              <h3>{experience.company}</h3>
-              <p>{experience.duration}</p>
-              <p>{experience.description}</p>
+            <div key={index} className="relative mb-8 last:mb-0">
+              {/* Green dot */}
+              <div className="absolute -left-[33px] top-2 w-3 h-3 bg-[#00ff88] rounded-full"></div>
+              
+              {/* Content card */}
+              <div className="bg-[#111] p-6 rounded-lg hover:bg-[#1a1a1a] transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-1">
+                  {experience.title}
+                </h3>
+                <p className="text-[#00ff88] mb-2">{experience.company}</p>
+                <p className="text-gray-400 text-sm mb-3">{experience.duration}</p>
+                <p className="text-gray-300 leading-relaxed">
+                  {experience.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="Education">
-        <div>
-          {education.map((education, index) => (
-            <div key={index}>
-              <h2>{education.title}</h2>
-              <h3>{education.company}</h3>
-              <p>{education.duration}</p>
-              <p>{education.description}</p>
+      {/* Education Section */}
+      <section id="education" className="scroll-mt-20">
+        <h2 className="text-3xl font-bold mb-8 text-[#00ff88] flex items-center gap-3">
+          <img src={educationIcon} alt="Education" className="w-8 h-8" />
+          EDUCATION
+        </h2>
+        <div className="relative pl-8 border-l-2 border-gray-700">
+          {education.map((edu, index) => (
+            <div key={index} className="relative mb-8 last:mb-0">
+              {/* Green dot */}
+              <div className="absolute -left-[33px] top-2 w-3 h-3 bg-[#00ff88] rounded-full"></div>
+              
+              {/* Content card */}
+              <div className="bg-[#111] p-6 rounded-lg hover:bg-[#1a1a1a] transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-1">
+                  {edu.degree}
+                </h3>
+                <p className="text-[#00ff88] mb-2">{edu.institution}</p>
+                <p className="text-gray-400 text-sm mb-3">{edu.duration}</p>
+                <p className="text-gray-300 leading-relaxed">
+                  {edu.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
