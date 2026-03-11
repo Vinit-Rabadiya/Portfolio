@@ -110,7 +110,7 @@ function Resume() {
 
             {/* Right side - Content */}
             <div className="flex-grow">
-              <h2 className="text-3xl font-bold mb-8 text-[#00ff88] mt-2">
+              <h2 className="text-3xl font-bold mb-8 text-[#00ff88] mt-2 -ml-4">
                 Experience
               </h2>
               <div className="relative" ref={experienceContentRef}>
@@ -169,7 +169,7 @@ function Resume() {
 
             {/* Right side - Content */}
             <div className="flex-grow">
-              <h2 className="text-3xl font-bold mb-8 text-[#00ff88] mt-2">
+              <h2 className="text-3xl font-bold mb-8 text-[#00ff88] mt-2 -ml-4">
                 Education
               </h2>
               <div className="relative" ref={educationContentRef}>
