@@ -17,7 +17,7 @@ function Project() {
     {
       title: "Vintage Recipes",
       image: new URL(
-        "../../assets/ProjectImages/recipesProject.png",
+        "../../assets/ProjectImages/recipeProject.png",
         import.meta.url,
       ).href,
       description:
