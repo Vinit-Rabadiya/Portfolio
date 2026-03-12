@@ -14,6 +14,16 @@ function Project() {
         "A password manager project that securely stores and manages user passwords using encryption and hashing, helping users organize and protect their login credentials in one place.",
       github: "https://github.com/Vinit-Rabadiya/Password-Manager",
     },
+    {
+      title: "Vintage Recipes",
+      image: new URL(
+        "../../assets/ProjectImages/recipesProject.png",
+        import.meta.url,
+      ).href,
+      description:
+        "A recipe management web application built with PHP and MySQL that allows users to discover, share, and manage their favorite recipes.",
+      github: "https://github.com/Vinit-Rabadiya/RecipeWebsite",
+    },
   ];
 
   return (
@@ -34,7 +44,7 @@ function Project() {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-lg"
+              className="w-full h-48 object-contain rounded-lg"
             />
 
             <div className="py-4">
