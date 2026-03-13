@@ -9,3 +9,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .page-background {
+    padding: 10px;
+  }
+}
