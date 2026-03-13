@@ -84,6 +84,18 @@
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
+  #home {
+    min-height: 100vh !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  #skills {
+    min-height: auto !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
   .hero-tagline {
     font-size: 1.25rem !important;
     margin-bottom: 1.5rem !important;
@@ -114,5 +126,7 @@
 
   #skills h2 {
     font-size: 1.875rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
   }
 }
