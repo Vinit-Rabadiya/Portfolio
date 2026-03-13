@@ -81,3 +81,38 @@
   height: 64px;
   object-fit: contain;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .hero-tagline {
+    font-size: 1.25rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem !important;
+  }
+
+  .hero-content h2 {
+    font-size: 1.25rem !important;
+  }
+
+  .hero-description {
+    font-size: 0.875rem !important;
+    padding: 0 1rem;
+  }
+
+  .skill-row {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .skill-item img {
+    width: 48px;
+    height: 48px;
+  }
+
+  #skills h2 {
+    font-size: 1.875rem !important;
+  }
+}
