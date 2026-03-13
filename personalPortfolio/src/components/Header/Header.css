@@ -63,54 +63,55 @@ nav a.active::after {
 }
 .i-letter {
   position: relative;
+  display: inline-block;
 }
 
 .i-letter .dot {
   position: absolute;
-  top: 6.5px;
-  left: 7.09px;
-  width: 6px;
-  height: 6px;
+  top: 0.2em;
+  left: 0.22em;
+  width: 0.19em;
+  height: 0.19em;
   background: #00ff88;
   border-radius: 50%;
   animation: glowDot 1.6s infinite ease-in-out;
   box-shadow:
-    0 0 8px #00ff88,
-    0 0 16px #00ff88,
-    0 0 24px #00ff88;
+    0 0 0.25em #00ff88,
+    0 0 0.5em #00ff88,
+    0 0 0.75em #00ff88;
   z-index: 2;
 }
 .square {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 0.25em;
+  height: 0.25em;
   background: #22c55e;
-  margin-left: 10px;
-  vertical-align:baseline;
+  margin-left: 0.31em;
+  vertical-align: baseline;
 }
 
 @keyframes glowDot {
   0% {
     opacity: 0.8;
     box-shadow:
-      0 0 8px #00ff88,
-      0 0 16px #00ff88,
-      0 0 24px #00ff88;
+      0 0 0.25em #00ff88,
+      0 0 0.5em #00ff88,
+      0 0 0.75em #00ff88;
   }
   50% {
     opacity: 1;
     box-shadow:
-      0 0 15px #00ff88,
-      0 0 30px #00ff88,
-      0 0 45px #00ff88,
-      0 0 60px #00ff88;
+      0 0 0.47em #00ff88,
+      0 0 0.94em #00ff88,
+      0 0 1.41em #00ff88,
+      0 0 1.88em #00ff88;
   }
   100% {
     opacity: 0.8;
     box-shadow:
-      0 0 8px #00ff88,
-      0 0 16px #00ff88,
-      0 0 24px #00ff88;
+      0 0 0.25em #00ff88,
+      0 0 0.5em #00ff88,
+      0 0 0.75em #00ff88;
   }
 }
 
