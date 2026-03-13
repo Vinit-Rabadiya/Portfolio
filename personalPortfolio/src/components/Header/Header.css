@@ -113,3 +113,27 @@ nav a.active::after {
       0 0 24px #00ff88;
   }
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+  }
+}
