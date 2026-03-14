@@ -7,7 +7,7 @@ import Project from "./Project";
 function Home() {
   const [displayText, setDisplayText] = useState("");
   const fullText =
-    "Student developer exploring AI/ML and building modern web applications. I enjoy transforming ideas into real, practical projects while continuously learning and improving my skills as a developer";
+    "Student developer exploring AI/ML and building modern web applications. I enjoy transforming ideas into real, practical projects while continuously learning and improving my skills as a developer.";
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
