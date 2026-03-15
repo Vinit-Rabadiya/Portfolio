@@ -38,7 +38,7 @@ function Project() {
       <div className="projects-container grid grid-cols-[repeat(auto-fit,minmax(300px,320px))] justify-center gap-8 w-full ">
         {projects.map((project, index) => (
           <div
-            className="project-card w-full rounded-xl overflow-hidden shadow-lg bg-[#111] hover:scale-102 hover:shadow-[0_0_10px_#00ff88] transition-all duration-600 p-4"
+            className="project-card w-full rounded-xl overflow-hidden shadow-lg bg-[#111] hover:scale-102 hover:shadow-[0_0_10px_#00ff88] transition-all duration-600 p-4 flex flex-col"
             key={index}
           >
             <img
@@ -47,7 +47,7 @@ function Project() {
               className="w-full h-48 object-contain rounded-lg"
             />
 
-            <div className="py-4">
+            <div className="py-4 flex-1">
               <h3 className="font-bold text-xl mb-3 text-white">
                 {project.title}
               </h3>
@@ -59,7 +59,7 @@ function Project() {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block"
+              className="inline-block mt-auto"
             >
               <img
                 src={gitHubLogo}
