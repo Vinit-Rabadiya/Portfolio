@@ -18,18 +18,17 @@ function Header() {
 
     const handleScroll = () => {
       const sections = ["home", "skills", "projects"];
-      const scrollPosition = window.scrollY + 100; // Offset for header height
+      const scrollPosition = window.scrollY + 100;
 
+      // iterate in reverse so the last visible section wins
+      let current = "home";
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(sectionId);
-            break;
-          }
+        if (element && scrollPosition >= element.offsetTop) {
+          current = sectionId;
         }
       }
+      setActiveSection(current);
     };
 
     window.addEventListener("scroll", handleScroll);
