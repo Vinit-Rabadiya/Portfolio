@@ -35,10 +35,10 @@ function Project() {
         PROJECTS
       </h2>
 
-      <div className="projects-container grid grid-cols-[repeat(auto-fit,minmax(300px,320px))] justify-center gap-8 w-full ">
+      <div className="projects-container grid grid-cols-[repeat(auto-fit,minmax(300px,320px))] justify-center gap-8 w-full items-stretch">
         {projects.map((project, index) => (
           <div
-            className="project-card w-full rounded-xl overflow-hidden shadow-lg bg-[#111] hover:scale-102 hover:shadow-[0_0_10px_#00ff88] transition-all duration-600 p-4 flex flex-col"
+            className="project-card w-full h-full rounded-xl overflow-hidden shadow-lg bg-[#111] hover:scale-102 hover:shadow-[0_0_10px_#00ff88] transition-all duration-600 p-4 flex flex-col"
             key={index}
           >
             <img
