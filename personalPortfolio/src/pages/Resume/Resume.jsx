@@ -15,31 +15,33 @@ function Resume() {
     const updateLineHeights = () => {
       // Update experience line
       if (experienceContentRef.current && experienceLineRef.current) {
-        const items = experienceContentRef.current.querySelectorAll('.timeline-item');
+        const items =
+          experienceContentRef.current.querySelectorAll(".timeline-item");
         if (items.length > 0) {
           const lastItem = items[items.length - 1];
-          const dot = lastItem.querySelector('.timeline-dot');
+          const dot = lastItem.querySelector(".timeline-dot");
           if (dot) {
             // Get the absolute position of the dot relative to the line container
             const lineRect = experienceLineRef.current.getBoundingClientRect();
             const dotRect = dot.getBoundingClientRect();
             // Calculate height from top of line to center of last dot
-            const height = dotRect.top - lineRect.top + (dotRect.height / 2);
+            const height = dotRect.top - lineRect.top + dotRect.height / 2;
             experienceLineRef.current.style.height = `${height}px`;
           }
         }
       }
-      
+
       // Update education line
       if (educationContentRef.current && educationLineRef.current) {
-        const items = educationContentRef.current.querySelectorAll('.timeline-item');
+        const items =
+          educationContentRef.current.querySelectorAll(".timeline-item");
         if (items.length > 0) {
           const lastItem = items[items.length - 1];
-          const dot = lastItem.querySelector('.timeline-dot');
+          const dot = lastItem.querySelector(".timeline-dot");
           if (dot) {
             const lineRect = educationLineRef.current.getBoundingClientRect();
             const dotRect = dot.getBoundingClientRect();
-            const height = dotRect.top - lineRect.top + (dotRect.height / 2);
+            const height = dotRect.top - lineRect.top + dotRect.height / 2;
             educationLineRef.current.style.height = `${height}px`;
           }
         }
@@ -48,21 +50,21 @@ function Resume() {
 
     // Use setTimeout to ensure DOM is fully rendered
     setTimeout(updateLineHeights, 100);
-    window.addEventListener('resize', updateLineHeights);
-    return () => window.removeEventListener('resize', updateLineHeights);
+    window.addEventListener("resize", updateLineHeights);
+    return () => window.removeEventListener("resize", updateLineHeights);
   }, []);
 
   const experiences = [
     {
       title: "Junior Smart Fellow (Data Science Intern)",
       company: "@iLabAfrica",
-      duration: "January 2026 – Present",
+      duration: "January 2026 – March 2026",
       responsibilities: [
         "Perform data profiling, cleaning, and exploratory data analysis using Python (Pandas, NumPy, Matplotlib, Seaborn, and other libraries).",
         "Applied machine learning models to conduct predictive analysis on real-world and healthcare-related data.",
         "Interpret model results and generate meaningful insights.",
-        "Develop interactive dashboards in Power BI using measures, Power Query, and visualizations to present findings."
-      ]
+        "Develop interactive dashboards in Power BI using measures, Power Query, and visualizations to present findings.",
+      ],
     },
   ];
 
@@ -79,9 +81,9 @@ function Resume() {
       institution: "SCLP Samaj Senior School",
       location: "Nairobi, Kenya",
       duration: "2020 - 2022",
-      description: "Obtained grade 'A' in Pure Mathematics and Chemistry, grade 'B' in Physics and grade 'C' in Further Pure Mathematics.",
+      description:
+        "Obtained grade 'A' in Pure Mathematics and Chemistry, grade 'B' in Physics and grade 'C' in Further Pure Mathematics.",
     },
-    
   ];
 
   return (
@@ -107,7 +109,7 @@ function Resume() {
                 />
               </div>
               {/* Vertical line from icon to last dot */}
-              <div 
+              <div
                 ref={experienceLineRef}
                 className="absolute left-1/2 -translate-x-1/2 top-0 w-0.5 bg-gray-700"
               ></div>
@@ -120,7 +122,10 @@ function Resume() {
               </h2>
               <div className="relative" ref={experienceContentRef}>
                 {experiences.map((experience, index) => (
-                  <div key={index} className="timeline-item relative mb-10 last:mb-0">
+                  <div
+                    key={index}
+                    className="timeline-item relative mb-10 last:mb-0"
+                  >
                     {/* Green dot on the line */}
                     <div className="timeline-dot absolute left-[-54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
 
@@ -129,7 +134,9 @@ function Resume() {
                       <h3 className="text-lg font-semibold text-white mb-1">
                         {experience.title}
                       </h3>
-                      <p className="text-[#00ff88] mb-1 text-sm">{experience.company}</p>
+                      <p className="text-[#00ff88] mb-1 text-sm">
+                        {experience.company}
+                      </p>
                       <p className="text-gray-400 text-sm mb-3">
                         {experience.duration}
                       </p>
@@ -171,7 +178,7 @@ function Resume() {
                 />
               </div>
               {/* Vertical line from icon to last dot */}
-              <div 
+              <div
                 ref={educationLineRef}
                 className="absolute left-1/2 -translate-x-1/2 top-0 w-0.5 bg-gray-700"
               ></div>
@@ -184,7 +191,10 @@ function Resume() {
               </h2>
               <div className="relative" ref={educationContentRef}>
                 {education.map((edu, index) => (
-                  <div key={index} className="timeline-item relative mb-10 last:mb-0">
+                  <div
+                    key={index}
+                    className="timeline-item relative mb-10 last:mb-0"
+                  >
                     {/* Green dot on the line */}
                     <div className="timeline-dot absolute left-[-54px] top-2 w-3 h-3 bg-[#00ff88] rounded-full shadow-[0_0_0_3px_rgba(0,255,136,0.3)] z-10"></div>
 
@@ -196,7 +206,9 @@ function Resume() {
                       <p className="text-[#00ff88] mb-1 text-sm">
                         {edu.institution} • {edu.location}
                       </p>
-                      <p className="text-gray-400 text-sm mb-3">{edu.duration}</p>
+                      <p className="text-gray-400 text-sm mb-3">
+                        {edu.duration}
+                      </p>
                       {edu.description && (
                         <p className="text-gray-300 leading-relaxed text-sm">
                           {edu.description}
